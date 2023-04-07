@@ -1,0 +1,2 @@
+a := Receipt  new.
+a scanReceipt: 'C:\Users\Dizzle\Desktop\Informatik\4.Semester\SemesterProjekt\Belege\TestSuite-1_Edited\a060.png'

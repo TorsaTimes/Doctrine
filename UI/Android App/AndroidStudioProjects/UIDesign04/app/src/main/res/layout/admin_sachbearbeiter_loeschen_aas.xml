@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sachbearbeiter Löschen"
+        android:textAppearance="?android:attr/textAppearanceLarge">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/sachbearbeiterLoeschenText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <Button
+        android:id="@+id/buttonSachbearbeiterLoeschen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Löschen" />
+
+</LinearLayout>

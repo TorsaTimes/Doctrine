@@ -1,0 +1,5 @@
+﻿  pch.cpp
+  Operatoren.cpp
+c:\users\torsa\source\repos\operatoren\operatoren\operatoren.cpp(22): error C3872: "0xa4": Dieses Zeichen ist in einem Bezeichner nicht zulässig.
+c:\users\torsa\source\repos\operatoren\operatoren\operatoren.cpp(69): error C2664: "Auto::Auto(const Auto &)" : Konvertierung von Argument 3 von "Datum" in "Datum *" nicht möglich
+  c:\users\torsa\source\repos\operatoren\operatoren\operatoren.cpp(69): note: Kein benutzerdefinierter Konvertierungsoperator verfügbar, der diese Konvertierung durchführen kann, oder der Operator kann nicht aufgerufen werden

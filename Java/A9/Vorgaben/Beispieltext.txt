@@ -1,0 +1,6 @@
+Dies ist ein Text mit etwa 5 Zeilen.
+Im Text kommen auch einige Zahlen,
+wie etwa 5 und 4 vor,
+die von der Software ignoriert
+werden sollten.
+

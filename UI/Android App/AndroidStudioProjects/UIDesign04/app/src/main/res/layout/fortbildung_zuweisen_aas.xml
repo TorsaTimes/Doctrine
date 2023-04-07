@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fortbildung Zuweisen"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fortbildung Auswählen" />
+
+    <ListView
+        android:id="@+id/listeFortbildung"
+        android:layout_width="match_parent"
+        android:layout_height="225dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="67dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonBelegt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Belegt" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBestanden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bestanden" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonZuweisen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zuweisen" />
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+CHIP Not {
+IN in1;
+OUT result;
+
+PARTS:
+Nand(
+a=in1,
+b=in1,
+out=result);
+}

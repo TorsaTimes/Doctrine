@@ -1,0 +1,109 @@
+package ctr;
+
+import java.io.*;
+import java.util.*;
+
+public class TextAnalyse {
+    private static boolean isLetter(char c) {
+       return ( (('a' <= c) && (c <= 'z')) ||
+                (('A' <= c) && (c <= 'Z')) ||
+                (c=='ß') ||
+                (c=='ä') || (c=='ö') || (c=='ü') ||
+                (c=='Ä') || (c=='Ö') || (c=='Ü')
+              );
+    }
+	
+    private static String readWord(BufferedReader f) throws IOException {
+       String s= new String();
+       char c;
+       int ci;
+       // wait for next letter
+       do {ci=f.read();
+           c=(char)ci;
+          } while (!isLetter(c) && (ci!=-1));
+       // wait for end of word
+       while (isLetter(c)) {
+    	  s += c;
+    	  ci=f.read();
+    	  c=(char)ci;
+       }
+       if (s.length()==0)
+    	 return null;
+       else
+    	 return s;
+    }
+    
+    public static void main(String[] args) {
+      
+    	try {	
+    		SortedMap<String, Character> woerterbuch = new TreeMap<String, Character>(String.CASE_INSENSITIVE_ORDER);
+    		SortedMap<String, Integer> anzahl = new TreeMap<String, Integer>();
+    		BufferedReader f;
+    	    LineNumberReader lnr = new LineNumberReader(new FileReader("Beispieltext.txt"));
+    	    SortedMap<String, Integer[]> lines = new TreeMap<String, Integer[]>();
+    		String s;
+    	   String sl;
+    	   Integer[] cache = null; 
+    	   while((sl = lnr.readLine()) != null) {
+    	   Reader inputString = new StringReader(sl);
+    	   f = new BufferedReader(inputString);
+           while ((s=TextAnalyse.readWord(f))!=null) {
+        	  System.out.println("Gelesenes Wort:" + s);
+        
+           Character c = new Character(s.charAt(0));
+           int ascii = (int) c;
+           
+           if(ascii>=65 && ascii <= 90) {
+        	   woerterbuch.put(s,c);
+           }else {
+        	   ascii -= 32;
+        	   c= (char) ascii;
+        	   woerterbuch.put(s, c);
+        	   
+           }
+           woerterbuch.put(s, c);
+          
+           
+           if(anzahl.containsKey(s)) {
+        	   int counter = 1;
+        	   for (String t : anzahl.keySet()) {
+        		   if(t.equals(s)) {
+        			   counter++;
+        			   cache = new Integer[lines.get(s).length + 1];
+        			   for(int i = 0;i<lines.get(s).length;i++) {
+        				   cache[i] = lines.get(s)[i];
+        			   }
+        			   cache[lines.get(s).length] = lnr.getLineNumber();
+        		   }
+        	   }
+           anzahl.replace(s, counter);
+           lines.replace(s, cache);
+           }else {
+        	   anzahl.put(s, 1);
+        	   Integer zl[] = {lnr.getLineNumber()};
+        	   lines.put(s, zl);
+           }
+         
+           }
+    	   }
+          
+    	for(String t : woerterbuch.keySet()) {
+    	String wort = t;
+    	Character buchstabe = woerterbuch.get(t);
+    	int anz = anzahl.get(wort);
+    	Integer zei[] = lines.get(wort);
+    	System.out.print(buchstabe + ": " + wort + " - " + anz + "x" +  " Zeilennummer: ");
+    	for(int i = 0;i<zei.length;i++) {
+    		System.out.print(zei[i] + " ");
+    	}
+    	System.out.println("");
+    	}
+    	
+    	
+    	
+    	
+    	} catch (IOException e) {
+               System.out.println("Fehler beim Lesen der Datei:" +e.getMessage());	
+            }
+    }
+}

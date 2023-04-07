@@ -1,0 +1,3 @@
+﻿  ConsoleApplication3.cpp
+c:\users\torsa\source\repos\consoleapplication3\consoleapplication3\consoleapplication3.cpp(19): warning C4715: "digits": Nicht alle Codepfade geben einen Wert zurück.
+  ConsoleApplication3.vcxproj -> C:\Users\torsa\source\repos\ConsoleApplication3\Debug\ConsoleApplication3.exe

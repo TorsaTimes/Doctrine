@@ -1,0 +1,216 @@
+
+
+/*NachrichtListe.html*/
+
+body {
+    background-color: #C4CDD4;
+    font-family: 'Abel', sans-serif;
+}
+
+
+
+div {
+    background-color: white;
+    max-width: 500px;
+    margin: 1px auto;
+}
+
+
+
+
+/*NachrichtListe.html: Abgerundetet Ecke der oberen und unterren Nachricht*/
+
+#one {
+    border-radius: 10px 10px 0px 0px;
+}
+
+#second {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*-----------------------------------------*/
+
+
+/*NachrichtListe.html: */
+
+.liste {
+    background-color: #C4CDD4;
+}
+
+.section {
+    padding: 2px;
+	transition: 0.4s;
+}
+
+.line {
+    display: inline;
+}
+
+.username {
+    font-weight: bold
+}
+
+.Info {
+    font-style: oblique;
+    color: grey;
+}
+
+.Datum {
+    float: right;
+}
+
+/*--------------------------------------------------*/
+
+#navigation{
+    position: absolute;
+    width: 100px;
+    background-color: #C4CDD4;
+    top: 65px;
+}
+
+#inhalt {
+    margin-left: 120px;
+    top: 50px;
+	background-color: #C4CDD4;
+}
+
+#überschrift {
+    background-color: #C4CDD4;
+    border-width: 1px;
+    margin: 10px;
+    font-family: 'Righteous', cursive;
+}
+
+#navigationsüberschrift {
+    text-decoration: overline underline;
+    font-weight: bold;
+}
+
+a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: greenyellow;
+	
+}
+
+.section:hover {
+    transform: scale(1.1);
+}
+
+/*----------------------------------------------------------------*/
+/*NeueNachrichtenDesign*/
+
+/*body {
+    background-color: #C4CDD4;
+    font-family: 'Abel', sans-serif;
+}*/
+
+/*a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}*/
+
+/*a:hover {
+    text-decoration: none;
+    color: yellowgreen;
+}*/
+
+/*#überschrift {
+    background-color: #C4CDD4;
+    border-width: 1px;
+    margin: 10px;
+    font-family: 'Righteous', cursive;
+}*/
+
+/*#navigationNeueNachricht {
+    position: absolute;
+    top: 65px;
+    width: 100px;
+	background-color: #C4CDD4;
+}*/
+
+/*#inhalt {
+    top: 50px;
+    margin-left: 120px;
+    background-color: #C4CDD4;
+}*/
+
+/*#navigationsüberschrift {
+    text-decoration: overline underline;
+    font-weight: bold;
+}*/
+
+
+#count {
+	background-color: #C4CDD4;
+    max-width: auto;
+    margin: 1px auto;
+}
+
+.lineNeueNachricht {
+		background-color: #C4CDD4;
+		display: inline;
+
+}
+
+.zahl {
+	background-color: #C4CDD4;
+    display: inline;
+}
+
+.infoWörter {
+    background-color: #C4CDD4;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*RegestrierungsmaskeDesign*/
+
+/*body {
+    background-color: #C4CDD4;
+    font-family: 'Abel', sans-serif;
+}*/
+
+/*a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}*/
+
+/*a:hover {
+    text-decoration: none;
+    color: yellowgreen;
+}*/
+
+/*#überschrift {
+    background-color: #C4CDD4;
+    border-width: 1px;
+    margin: 10px;
+    font-family: 'Righteous', cursive;
+}*/
+
+/*#navigationRegestrierung {
+    position: absolute;
+    top: 65px;
+    width: 100px;
+	background-color: #C4CDD4;
+}*/
+
+/*#inhalt{
+    top: 50px;
+    margin-left: 120px;
+}*/
+
+/*#navigationsüberschrift {
+    text-decoration: overline underline;
+    font-weight: bold;
+}*/
+
+/*---------------------------------------------------------------*/

@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<h:head>
+		<title>Sachbearbeiterverwaltung - Administratoren Menue</title>
+		
+	</h:head>
+	<h:body>
+		<h2><h:outputText value="Sachbearbeiterverwaltung - Administratoren Menü" /></h2>
+	</h:body>
+	<h:form>
+		<h:panelGrid columns="6">
+
+		<h:commandButton value="Erstellen"  immideate="true" action="/SachbearbeiterAdministratorErstellenDK.xhtml?faces-redirect=true"/>
+		<h:commandButton value="Editieren" immideate="true" action="/SachbearbeiterAdministratorEditierenDK.xhtml?faces-redirect=true"/>
+		<h:commandButton value="Löschen"    immideate="true" action="/SachbearbeiterAdminLoeschenAAS.xhtml?faces-redirect=true"/>
+		<h:commandButton value="Fortbildung Zuweisen"  immideate="true" action="#{fortbildungZuordnenAAS.oeffnenAdministrator}"/>
+		<h:commandButton value="Fortbildungszuordnung Löschen"  immideate="true" action="#{fortbildungLoeschenAAS.oeffnenAdministrator}"/>
+		<h:commandButton value="Logout"  immideate="true" action="/SachbearbeiterverwaltungHS.xhtml?faces-redirect=true"/>
+
+		
+		</h:panelGrid>
+		
+	</h:form>
+	
+</html>

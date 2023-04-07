@@ -1,0 +1,48 @@
+Verwenden Sie diese @ApplicationScopedOption für anwendungsweite Daten / Konstanten, z. B. für Dropdown-Listen, 
+die für alle gleich sind, oder für verwaltete Beans ohne Instanzvariablen und mit nur Methoden.
+deswegen kombobox
+@ApplicationScoped
+
+Bean lebt, solange die Webanwendung lebt. Es wird bei der ersten HTTP-Anforderung erstellt, an der diese Bean in der 
+Anwendung beteiligt ist (oder wenn die Webanwendung gestartet wird und das eager = true-Attribut 
+in @ManagedBean festgelegt ist) und wird zerstört, wenn die Webanwendung beendet wird.
+
+• Application: Ein Objekt mit Anwendungsbereich ist in allen Anforderungs- / Antwortzyklen
+für alle Clients sichtbar, die die Anwendung verwenden, solange die Anwendung aktiv ist. Objekte mit
+Anwendungsbereich können andere Objekte ohne oder mit Anwendungsbereich verwenden.
+
+Request: Objekte mit diesem Bereich sind vom Beginn der Anfrage bis zum Ende
+der Anfrage sichtbar . Der Anforderungsbereich beginnt am Anfang einer Anforderung und endet, wenn die
+Antwort an den Client gesendet wurde. Wenn die Anforderung weitergeleitet wird, werden die Objekte
+auf der weitergeleiteten Seite angezeigt, da diese Seite immer noch Teil desselben Anforderungs- / Antwortzyklus
+ist. Objekte mit Anforderungsbereich können andere Objekte mit keinem, Anforderungs-, Sitzungs-
+oder Anwendungsbereich verwenden.
+
+//@RequestScoped
+//Lebt genau so lang wie eine HTTP-Anfrage - wird am Ende der anforderung geloescht
+//immer neu erstellt
+//alle geaenderten eigenschaften gehen verloren
+//
+//@ViewScoped
+//Bean lebt so lange , wie der Benutzer mit dem Fenster interagiert - wird zerstoert, sobalt die Ansicht verlassen wird
+//
+//@SessionScoped
+//Lebt die gesamte Sitzung ueber - bei der ersten anforderung erstellt
+//
+//	
+//@ApplicationScoped
+//Bean lebt solange wie Web-Anwendung
+
+
+
+  <!--<security-constraint>
+//<web-resource-collection>
+//	<web-resource-name>NotAllowed</web-resource-name>
+//	<url-pattern>/faces/*</url-pattern>
+//	<url-pattern>/home/*</url-pattern>
+//</web-resource-collection>
+//<auth-constraint />
+//<user-data-constraint>
+//	<transport-guarantee>NONE</transport-guarantee>
+//</user-data-constraint>
+//</security-constraint> -->

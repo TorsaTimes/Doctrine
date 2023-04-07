@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "outDir": "public/dist",
+    "baseUrl": "src",
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": false,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "checkJs": true,
+    "noImplicitAny": false,
+    "sourceMap": false
+  },
+  "include": ["src", "typings/fonts.d.ts"]
+}

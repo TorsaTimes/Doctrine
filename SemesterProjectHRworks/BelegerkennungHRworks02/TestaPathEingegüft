@@ -1,0 +1,2 @@
+aBeleg := Receipt  new.
+aBeleg scanReceipt: 'C:\Users\Dizzle\Desktop\Informatik\4.Semester\SemesterProjekt\Belege\TestSuite-1_Edited\a018.png' a Receipt

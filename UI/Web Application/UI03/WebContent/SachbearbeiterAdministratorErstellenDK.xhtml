@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<h:head>
+		<title>Sachbearbeiter Erstellen - Administrator</title>
+	</h:head>
+	<h:body>
+		<h2><h:outputText value="Sachbearbeiter Erstellen - Administrator" /></h2>
+	</h:body>
+	<h:form>
+		<h:panelGrid columns="2">
+
+			<ui:include src="/BenutzernamePasswort.xhtml"></ui:include>
+
+		</h:panelGrid>
+		<h:panelGrid columns="2">
+
+			<ui:include src="/SelectBooleanCheckbox.xhtml"></ui:include>
+		</h:panelGrid>
+		<h:messages/>
+	<h:panelGrid columns="2">
+		<h:commandButton value="OK" immideate="true" action="#{sachbearbeiterAdministratorErstellenAAS.start}"/>
+		<h:commandButton value="Zurück" immideate="true" action="#{sachbearbeiterAdministratorErstellenAAS.zurueck}"/>
+	</h:panelGrid>
+	</h:form>
+
+	
+</html>

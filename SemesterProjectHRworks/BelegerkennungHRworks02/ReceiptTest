@@ -1,0 +1,4 @@
+aReceipt :=Receipt  new.
+aReceipt filterAllTextractLines. 
+
+'Hallo' match: ''. 

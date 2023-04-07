@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "outDir": "build/",
+    "rootDir": "src/",
+    "declaration": false,
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": false,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true
+  },
+  "include": ["src/**/*"]
+}

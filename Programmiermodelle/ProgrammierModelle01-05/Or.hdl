@@ -1,0 +1,12 @@
+CHIP Or {
+    IN in1, in2;
+    OUT result;
+
+PARTS:
+Not(in1=in1,result=na);
+Not(in1=in2,result=nb);
+Nand(
+a = na,
+b = nb,
+out = result);
+}

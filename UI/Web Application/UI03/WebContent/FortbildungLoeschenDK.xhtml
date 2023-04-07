@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:composite="http://xmlns.jcp.org/jsf/composite">
+<head>
+<title>Fortbildung Loeschen</title>
+</head>
+<h:body>
+	<h2>
+		<h:outputText value="Fortbildung Loeschen - Administrator" />
+	</h2>
+	<h:form>
+
+		<h:panelGrid columns="1">
+
+			<h:outputText value="Ausgewählte Fortbildung" />
+			<h:selectOneMenu value="#{fortbildungAuswaehlenAAS.fortbildung}" >
+				<f:selectItems
+					value="#{fortbildungAuswaehlenAAS.fortbildungCollectionString}" />
+			</h:selectOneMenu>
+
+			<h:panelGrid cellspacing="10">
+				<h:outputText />
+				<h:outputText />
+				<h:outputText />
+				<h:outputText />
+				<h:outputText />
+			</h:panelGrid>
+
+			<h:outputText value="Ausgewählter Sachbearbieter" />
+			<h:selectOneMenu
+				value="#{sachbearbeiterAuswaehlenAAS.sachbearbeiter}" onchange = "submit()" valueChangeListener="#{sachbearbeiterAuswaehlenAAS.valueChangeMethod}">
+				
+				<f:selectItems
+					value="#{sachbearbeiterAuswaehlenAAS.sachbearbeiterCollectionString}" />
+			</h:selectOneMenu>
+
+			<h:panelGrid cellspacing="10">
+				<h:outputText />
+				<h:outputText />
+				<h:outputText />
+				<h:outputText />
+				<h:outputText />
+			</h:panelGrid>
+
+		</h:panelGrid>
+
+		<h:panelGrid columns="1">
+			<h:outputText value="Gebuchte Fortbildungen" />
+
+			<h:inputTextarea rows="7" cols="50"
+				value="#{sachbearbeiterAuswaehlenAAS.gebuchteFortbildungen}"
+				readonly="true" />
+		</h:panelGrid>
+
+
+
+		<h:messages />
+		<h:panelGrid columns="2">
+			<h:commandButton value="Löschen" action="#{fortbildungLoeschenAAS.start}"/>
+			<h:commandButton value="Zurück" immideate="true"
+				action="#{fortbildungLoeschenAAS.zurueck}" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
