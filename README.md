@@ -1,6 +1,6 @@
 # Doctrine
 
-Dieses Repository enthält Unterlagen und Lösungen für das Studienfach "Automata and Formal Languages". Die Inhalte sind in verschiedene Ordner organisiert, die jeweils verschiedene Themenbereiche abdecken.
+Dieses Repository enthält Unterlagen und Lösungen für diverese Studienfächer. Die Inhalte sind in verschiedene Ordner organisiert, die jeweils verschiedene Themenbereiche abdecken.
 
 ## Ordnerstruktur
 
